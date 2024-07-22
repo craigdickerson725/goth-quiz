@@ -87,3 +87,27 @@
   .timer-div img {
     margin-right: 0.5em; 
   }
+
+  /* Question and answer section */
+  .question {
+    margin-bottom: 1.25em;
+    font-weight: 600;
+  }
+  
+  .option-div {
+    font-size: 0.9em;
+    width: 100%;
+    padding: 1em;
+    margin: 0.3em 0;
+    text-align: left;
+    outline: none;
+    color: white;
+    background: #9d062c;
+    border: 1px solid #c0bfd2;
+    border-radius: 0.3em;
+  }
+  
+  .option-div:disabled {
+    color: black;
+    cursor: not-allowed;
+  }
