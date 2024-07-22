@@ -31,6 +31,7 @@
     justify-content: center;
   }
 
+  /* Button styles */
   button {
     border: none;
     outline: none;
@@ -49,6 +50,7 @@
     margin-top: 0.9em;
   }
   
+  /* Display container/game area styles */
   #display-container {
     background-color: #ffffff;
     padding: 3.1em 1.8em;
@@ -69,4 +71,19 @@
     align-items: center;
     padding-bottom: 0.6em;
     border-bottom: 0.1em solid #c0bfd2;
+  }
+
+  /* Timer styles */
+  .timer-div {
+    background-color: #e1f5fe;
+    width: 7.5em;
+    border-radius: 1.8em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7em 1.8em;
+  }
+  
+  .timer-div img {
+    margin-right: 0.5em; 
   }
