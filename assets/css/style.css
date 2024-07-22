@@ -1,0 +1,32 @@
+/* General styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    height: 100vh;
+    background: black;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #9d062c;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Start screen */
+  .start-screen,
+  .score-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
