@@ -130,3 +130,25 @@ function quizCreator() {
         quizContainer.appendChild(div);
     }
 }
+
+// Checker Function to see if users answer/option is correct
+function checker(userOption) {
+    let userSolution = userOption.innerText;
+    let question =
+        document.getElementsByClassName("container-mid")[questionCount];
+    let options = question.querySelectorAll(".option-div");
+
+    // If user clicks the correct answer stored in object
+    if (userSolution === quizArray[questionCount].correct) {
+        userOption.classList.add("correct");
+        scoreCount++;
+    } else {
+        userOption.classList.add("incorrect");
+        incorrectCount++;
+        // To mark the correct option/answer
+        options.forEach((element) => {
+            if (element.innerText == quizArray[questionCount].correct) {
+                element.classList.add("correct");
+            }
+        });
+    }
