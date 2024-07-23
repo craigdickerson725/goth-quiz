@@ -44,3 +44,18 @@ restart.addEventListener("click", () => {
     displayContainer.classList.remove("hide");
     scoreContainer.classList.add("hide");
 });
+
+// For the timer and countdown
+let timeLeft = document.querySelector(".time-left");
+let countdown;
+
+const timerDisplay = () => {
+    countdown = setInterval(() => {
+        count--;
+        timeLeft.innerHTML = `${count}s`;
+        if (count == 0) {
+            clearInterval(countdown);
+            displayNext();
+        }
+    }, 1000);
+};
