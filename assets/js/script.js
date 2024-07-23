@@ -152,3 +152,13 @@ function checker(userOption) {
             }
         });
     }
+
+        // To clear the question interval and stop the timer
+        clearInterval(countdown);
+        // To disable all options after selection
+        options.forEach((element) => {
+            element.disabled = true;
+        });
+    
+        updateScoreTracker();
+    }
