@@ -108,7 +108,7 @@ button {
 }
 
 .option-div:disabled {
-  color: black;
+  color: white;
   cursor: not-allowed;
 }
 
@@ -139,20 +139,72 @@ button {
 }
 
 .incorrect {
-  background-color: #ffdde0;
+  background-color: black;
   color: #d32f2f;
   border-color: #d32f2f;
 }
 
 .correct {
-  background-color: #e7f6d5;
-  color: #689f38;
-  border-color: #689f38;
+  background-color: #2f4719;
+  color: white;
+  border-color: #2f4719;
 }
 
 #user-score {
   font-size: 1.5em;
   color: #ffffff;
+}
+
+/* Media query for phones */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1rem;
+    padding: 1em;
+  }
+
+  #display-area {
+    width: 95%;
+    padding: 1.5em 0.5em;
+    margin-top: 4em;
+  }
+
+  .header {
+    padding-bottom: 0.4em;
+    border-bottom: 0.1em solid #c0bfd2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
+
+  .timer {
+    padding: 0.4em 0.8em;
+    margin-left: auto;
+  }
+
+  .option-div {
+    font-size: 0.7em;
+    padding: 0.6em;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #score-tracker {
+    margin-bottom: 1em;
+  }
+
+  #next-button {
+    font-size: 0.8em;
+    padding: 0.5em 1em;
+  }
+
+  #begin-button,
+  #restart {
+    font-size: 0.9em;
+    padding: 0.3em 1.2em;
+  }
 }
 
 /* Media Queries for tablets */
@@ -209,56 +261,5 @@ button {
   #restart {
     font-size: 1em;
     padding: 0.4em 1.5em;
-  }
-}
-
-/* Media query for phones */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 2rem;
-    padding: 1em;
-  }
-
-  #display-area {
-    width: 95%;
-    padding: 1.5em 0.5em;
-  }
-
-  .header {
-    padding-bottom: 0.4em;
-    border-bottom: 0.1em solid #c0bfd2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center
-  }
-
-  .timer {
-    padding: 0.4em 0.8em;
-    margin-left: auto;
-  }
-
-  .option-div {
-    font-size: 0.7em;
-    padding: 0.6em;
-  }
-
-  .footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #score-tracker {
-    margin-bottom: 1em;
-  }
-
-  #next-button {
-    font-size: 0.8em;
-    padding: 0.5em 1em;
-  }
-
-  #begin-button,
-  #restart {
-    font-size: 0.9em;
-    padding: 0.3em 1.2em;
   }
 }
