@@ -1,19 +1,26 @@
 // For the initial setup
 let quizArea = document.getElementById("question-area");
+let questionP = document.getElementById("question");
+let optionDivs = document.querySelectorAll(".option-div");
 let questionCount;
 let scoreCount = 0;
 let incorrectCount = 0;
-let count = 11;
+let secCount = 11;
+
+optionDivs.forEach(btn => {
+    btn.addEventListener("click", function() {
+        checker(btn);
+    });
+});
 
 function initial() {
-    quizArea.innerHTML = "";
     questionCount = 0;
     scoreCount = 0;
     incorrectCount = 0;
-    count = 11;
+    secCount = 11;
     clearInterval(countdown);
     timerDisplay();
-    quizGenerator();
+    quizArray.sort(() => Math.random() - 0.5);
     questionDisplay(questionCount);
     updateScoreTracker();
 }
@@ -47,79 +54,78 @@ let countdown;
 function timerDisplay() {
     clearInterval(countdown);
     countdown = setInterval(() => {
-        if (count === 0) {
+        if (secCount === 0) {
             clearInterval(countdown);
-            displayNext();
+            disableButtons();
+            incrementIncorrectScore();
+            updateScoreTracker();
         } else {
-            count--;
-            timeLeftDisplay.innerText = `${count}s`;
+            secCount--;
+            timeLeftDisplay.innerText = `${secCount}s`;
         }
     }, 1000);
 }
 
 // To create the quiz
 function quizGenerator() {
-    quizArray.sort(() => Math.random() - 0.5);
-
-    for (let i of quizArray) {
-        i.options.sort(() => Math.random() - 0.5);
-        let div = document.createElement("div");
-        div.classList.add("container-mid", "hide");
-        quizArea.appendChild(div);
-
-        let question_DIV = document.createElement("p");
-        question_DIV.classList.add("question");
-        question_DIV.innerHTML = i.question;
-        div.appendChild(question_DIV);
-
-        div.innerHTML += `
-        <button class="option-div" onclick="checker(this)">${i.options[0]}</button>
-        <button class="option-div" onclick="checker(this)">${i.options[1]}</button>
-        <button class="option-div" onclick="checker(this)">${i.options[2]}</button>
-        <button class="option-div" onclick="checker(this)">${i.options[3]}</button>
-        `;
-    }
+    questionP.innerText = quizArray[questionCount].question;
+    quizArray[questionCount].options.sort(() => Math.random() - 0.5);
+    optionDivs.forEach((btn, index) => {
+        btn.innerText = quizArray[questionCount].options[index];
+    });
 }
 
 // To display the quiz
 function questionDisplay(questionCount) {
-    let quizCards = document.querySelectorAll(".container-mid");
-    quizCards.forEach((card) => {
-        card.classList.add("hide");
-    });
-    quizCards[questionCount].classList.remove("hide");
+    quizGenerator();
     document.querySelector(".question-number").innerHTML = `${questionCount + 1} of ${quizArray.length} questions`;
-    count = 11;
+    secCount = 11;
     clearInterval(countdown);
     timerDisplay();
 }
 
 // To check if the answer is correct or incorrect
 function checker(userChoice) {
+    disableButtons();
     let userAnswer = userChoice.innerText;
-    let question = document.getElementsByClassName("container-mid")[questionCount];
-    let options = question.querySelectorAll(".option-div");
-
     if (userAnswer === quizArray[questionCount].correct) {
         userChoice.classList.add("correct");
-        scoreCount++;
+        incrementCorrectScore(userChoice);
     } else {
         userChoice.classList.add("incorrect");
-        incorrectCount++;
-        options.forEach((element) => {
-            if (element.innerText == quizArray[questionCount].correct) {
-                element.classList.add("correct");
-            }
-        });
+        incrementIncorrectScore(userChoice);
     }
 
     clearInterval(countdown);
 
-    options.forEach((element) => {
-        element.disabled = true;
-    });
-
     updateScoreTracker();
+}
+
+function disableButtons() {
+    optionDivs.forEach((btn) => {
+        btn.disabled = true;
+    });
+}
+
+function enableButtons() {
+    optionDivs.forEach((btn) => {
+        btn.disabled = false;
+        btn.classList.remove("correct", "incorrect");
+    });
+}
+
+function incrementCorrectScore() {
+    scoreCount++;
+}
+
+function incrementIncorrectScore() {
+    incorrectCount++;
+    disableButtons();
+    optionDivs.forEach((btn) => {
+        if (btn.innerText == quizArray[questionCount].correct) {
+            btn.classList.add("correct");
+        }
+    });
 }
 
 // To display the next question
@@ -127,6 +133,7 @@ let nextButton = document.getElementById("next-button");
 nextButton.addEventListener("click", displayNext);
 
 function displayNext() {
+    enableButtons();
     questionCount++;
     if (questionCount === quizArray.length) {
         displayArea.classList.add("hide");
@@ -143,10 +150,6 @@ function updateScoreTracker() {
     document.getElementById("correct-score").innerText = scoreCount;
     document.getElementById("incorrect-score").innerText = incorrectCount;
 }
-
-// Hide the quiz area and score container on initial load
-displayArea.classList.add("hide");
-scoreArea.classList.add("hide");
 
 // Array for quiz questions and answers/options
 

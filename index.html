@@ -13,7 +13,7 @@
   <div class="begin-screen">
     <button id="begin-button">Start</button>
 </div>
-<div id="display-area">
+<div id="display-area" class="hide">
     <div class="header">
         <div class="question-counter">
             <span class="question-number">1 of 10 questions</span>
@@ -26,6 +26,13 @@
     </div>
     <div id="question-area">
         <!-- questions and options will be displayed here -->
+        <div class="container-mid">
+            <p class="question" id="question"></p>
+            <button class="option-div"></button>
+            <button class="option-div"></button>
+            <button class="option-div"></button>
+            <button class="option-div"></button>
+        </div>
     </div>
     <div class="footer">
         <div id="score-tracker">
