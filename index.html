@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -9,35 +9,35 @@
 </head>
 
 <body>
-    <h1><i class="fa-solid fa-skull" style="color: #9d062c;"></i> A Goth Quiz To Make You Sad</h1>
-    <div class="start-screen">
-        <button id="start-button">Start</button>
-    </div>
-    <div id="display-container">
-        <div class="header">
-            <div class="number-of-count">
-                <span class="number-of-question">1 of 10 questions</span>
-            </div>
-            <div class="timer-div">
-                <img src="https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/stopwatch-icon.png"
-                    width="20px" />
-                <span class="time-left">10s</span>
-            </div>
+  <h1><i class="fa-solid fa-skull" style="color: #9d062c;"></i> A Goth Quiz To Make You Sad</h1>
+  <div class="begin-screen">
+    <button id="begin-button">Start</button>
+</div>
+<div id="display-area">
+    <div class="header">
+        <div class="question-counter">
+            <span class="question-number">1 of 10 questions</span>
         </div>
-        <div id="container">
-            <!-- questions and options will be displayed here -->
-        </div>
-        <div class="footer">
-            <div id="score-tracker">
-                Correct: <span id="correct-score">0</span> | Incorrect: <span id="incorrect-score">0</span>
-            </div>
-            <button id="next-button">Next</button>
+        <div class="timer">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/stopwatch-icon.png"
+                width="20px" />
+            <span class="time-left">10s</span>
         </div>
     </div>
-    <div class="score-container hide">
-        <div id="user-score">Demo Score</div>
-        <button id="restart">Restart</button>
+    <div id="question-area">
+        <!-- questions and options will be displayed here -->
     </div>
+    <div class="footer">
+        <div id="score-tracker">
+            Correct: <span id="correct-score">0</span> | Incorrect: <span id="incorrect-score">0</span>
+        </div>
+        <button id="next-button">Next</button>
+    </div>
+</div>
+<div class="score-container hide">
+    <div id="user-score">Demo Score</div>
+    <button id="restart">Restart</button>
+</div>
     <script src="https://kit.fontawesome.com/0a86a59453.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>

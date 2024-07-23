@@ -19,7 +19,7 @@ h1 {
 }
 
 /* Start screen */
-.start-screen,
+.begin-screen,
 .score-container {
   position: absolute;
   top: 0;
@@ -38,7 +38,7 @@ button {
 }
 
 /* Start and restart buttons */
-#start-button,
+#begin-button,
 #restart {
   font-size: 1.3em;
   padding: 0.5em 1.8em;
@@ -51,7 +51,7 @@ button {
 }
 
 /* Quiz display area */
-#display-container {
+#display-area {
   background-color: #ffffff;
   padding: 3.1em 1.8em;
   width: 80%;
@@ -74,7 +74,7 @@ button {
 }
 
 /* Timer */
-.timer-div {
+.timer {
   background-color: #e1f5fe;
   width: 7.5em;
   border-radius: 1.8em;
@@ -84,7 +84,7 @@ button {
   padding: 0.7em 1.8em;
 }
 
-.timer-div img {
+.timer img {
   margin-right: 0.5em; 
 }
 
@@ -163,7 +163,7 @@ button {
     padding: 1em 1em;
   }
 
-  #display-container {
+  #display-area {
     width: 90%;
     padding: 2em 1em;
   }
@@ -176,7 +176,7 @@ button {
     align-items: center;
   }
 
-  .timer-div {
+  .timer {
     width: auto;
     padding: 0.5em 1em;
     margin-left: auto;
@@ -205,7 +205,7 @@ button {
     padding: 0.6em 1.5em;
   }
 
-  #start-button,
+  #begin-button,
   #restart {
     font-size: 1em;
     padding: 0.4em 1.5em;
@@ -219,7 +219,7 @@ button {
     padding: 1em;
   }
 
-  #display-container {
+  #display-area {
     width: 95%;
     padding: 1.5em 0.5em;
   }
@@ -229,10 +229,10 @@ button {
     border-bottom: 0.1em solid #c0bfd2;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center.
   }
 
-  .timer-div {
+  .timer {
     padding: 0.4em 0.8em;
     margin-left: auto;
   }
@@ -256,7 +256,7 @@ button {
     padding: 0.5em 1em;
   }
 
-  #start-button,
+  #begin-button,
   #restart {
     font-size: 0.9em;
     padding: 0.3em 1.2em;
