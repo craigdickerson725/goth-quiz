@@ -90,3 +90,14 @@ nextBtn.addEventListener(
         }
     })
 );
+
+// To display quiz
+const quizDisplay = (questionCount) => {
+    let quizCards = document.querySelectorAll(".container-mid");
+    // Hide other cards
+    quizCards.forEach((card) => {
+        card.classList.add("hide");
+    });
+    // Display current question card
+    quizCards[questionCount].classList.remove("hide");
+};
