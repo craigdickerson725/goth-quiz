@@ -1,4 +1,4 @@
-// Initial setup (start screen)
+// For the initial setup
 let quizContainer = document.getElementById("container");
 let questionCount;
 let scoreCount = 0;
@@ -18,7 +18,7 @@ function initial() {
     updateScoreTracker();
 }
 
-// When user clicks the start button
+// For when user clicks on the start button
 let startButton = document.getElementById("start-button");
 let startScreen = document.querySelector(".start-screen");
 let displayContainer = document.getElementById("display-container");
@@ -29,13 +29,13 @@ startButton.addEventListener("click", () => {
     initial();
 });
 
-// To hide quiz and display start screen
+// To hide the quiz area and display start screen
 window.onload = () => {
     startScreen.classList.remove("hide");
     displayContainer.classList.add("hide");
 };
 
-// Restart Quiz
+// To restart Quiz
 let restart = document.getElementById("restart");
 let scoreContainer = document.querySelector(".score-container");
 
@@ -68,7 +68,7 @@ let userScore = document.getElementById("user-score");
 nextBtn.addEventListener(
     "click",
     (displayNext = () => {
-        //increment questionCount
+        // to increment questionCount
         questionCount += 1;
         //if last question
         if (questionCount == quizArray.length) {
@@ -91,14 +91,14 @@ nextBtn.addEventListener(
     })
 );
 
-// To display quiz
+// For the quiz display
 const quizDisplay = (questionCount) => {
     let quizCards = document.querySelectorAll(".container-mid");
-    // Hide other cards
+    //Hide other cards
     quizCards.forEach((card) => {
         card.classList.add("hide");
     });
-    // Display current question card
+    //display current question card
     quizCards[questionCount].classList.remove("hide");
 };
 
@@ -131,21 +131,19 @@ function quizCreator() {
     }
 }
 
-// Checker Function to see if users answer/option is correct
+// Checker Function to check if the user's answer/option is correct
 function checker(userOption) {
     let userSolution = userOption.innerText;
     let question =
         document.getElementsByClassName("container-mid")[questionCount];
     let options = question.querySelectorAll(".option-div");
-
-    // If user clicks the correct answer stored in object
     if (userSolution === quizArray[questionCount].correct) {
         userOption.classList.add("correct");
         scoreCount++;
     } else {
         userOption.classList.add("incorrect");
         incorrectCount++;
-        // To mark the correct option/answer
+        //For marking the correct option
         options.forEach((element) => {
             if (element.innerText == quizArray[questionCount].correct) {
                 element.classList.add("correct");
@@ -153,23 +151,23 @@ function checker(userOption) {
         });
     }
 
-        // To clear the question interval and stop the timer
-        clearInterval(countdown);
-        // To disable all options after selection
-        options.forEach((element) => {
-            element.disabled = true;
-        });
-    
-        updateScoreTracker();
-    }
+    // To clear the question interval and stop the timer
+    clearInterval(countdown);
+    //disable all options
+    options.forEach((element) => {
+        element.disabled = true;
+    });
 
-    // To update the Score Tracker
+    updateScoreTracker();
+}
+
+// To update the score 
 function updateScoreTracker() {
     document.getElementById("correct-score").innerText = scoreCount;
     document.getElementById("incorrect-score").innerText = incorrectCount;
 }
 
-// Quiz question/answer array
+// Array for quiz questions and answers/options
 
 let quizArray = [
     {
@@ -186,14 +184,13 @@ let quizArray = [
     },
     {
         id: "2",
-        question: "Who is the most fun goth to watch a film with?"
-?",
+        question: "Who is the most fun goth to watch a film with?",
         options: ["Peter Murphy", "Elvira, Mistress of the Dark", "Christina Ricci", "Cher"],
         correct: "Elvira, Mistress of the Dark",
     },
     {
         id: "3",
-        question: When true goths get an ear ache, what do they do?",
+        question: "When true goths get an ear ache, what do they do?",
         options: ["Listen to the latest Taylor Swift single", "Get a home remedy from the Goth Medical Journal", "Pray to Hecate", "Scream into the void until the light and darkness become one"],
         correct: "Scream into the void until the light and darkness become one",
     },

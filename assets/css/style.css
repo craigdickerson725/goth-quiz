@@ -31,13 +31,13 @@ h1 {
   justify-content: center;
 }
 
-/* Button styles */
 button {
   border: none;
   outline: none;
   cursor: pointer;
 }
 
+/* Start and restart buttons */
 #start-button,
 #restart {
   font-size: 1.3em;
@@ -50,7 +50,7 @@ button {
   margin-top: 0.9em;
 }
 
-/* Display container/game area styles */
+/* Quiz display area */
 #display-container {
   background-color: #ffffff;
   padding: 3.1em 1.8em;
@@ -73,7 +73,7 @@ button {
   border-bottom: 0.1em solid #c0bfd2;
 }
 
-/* Timer styles */
+/* Timer */
 .timer-div {
   background-color: #e1f5fe;
   width: 7.5em;
@@ -85,10 +85,10 @@ button {
 }
 
 .timer-div img {
-  margin-right: 0.5em;
+  margin-right: 0.5em; 
 }
 
-/* Question and answer section */
+/* Question section */
 .question {
   margin-bottom: 1.25em;
   font-weight: 600;
@@ -112,7 +112,7 @@ button {
   cursor: not-allowed;
 }
 
-/* For bottom of game area (score-tracker, next button) */
+/* Bottom of the quiz area (score tracker and next button) */
 .footer {
   display: flex;
   justify-content: space-between;
@@ -155,7 +155,7 @@ button {
   color: #ffffff;
 }
 
-/* Media query for small screens and tablets */
+/* Media Queries for tablets */
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
