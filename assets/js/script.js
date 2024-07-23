@@ -162,3 +162,9 @@ function checker(userOption) {
     
         updateScoreTracker();
     }
+
+    // To update the Score Tracker
+function updateScoreTracker() {
+    document.getElementById("correct-score").innerText = scoreCount;
+    document.getElementById("incorrect-score").innerText = incorrectCount;
+}
