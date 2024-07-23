@@ -29,8 +29,18 @@ startButton.addEventListener("click", () => {
     initial();
 });
 
-//hide quiz and display start screen
+// To hide quiz and display start screen
 window.onload = () => {
     startScreen.classList.remove("hide");
     displayContainer.classList.add("hide");
 };
+
+// Restart Quiz
+let restart = document.getElementById("restart");
+let scoreContainer = document.querySelector(".score-container");
+
+restart.addEventListener("click", () => {
+    initial();
+    displayContainer.classList.remove("hide");
+    scoreContainer.classList.add("hide");
+});
