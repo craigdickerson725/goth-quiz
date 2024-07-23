@@ -17,3 +17,20 @@ function initial() {
     quizDisplay(questionCount);
     updateScoreTracker();
 }
+
+// When user clicks the start button
+let startButton = document.getElementById("start-button");
+let startScreen = document.querySelector(".start-screen");
+let displayContainer = document.getElementById("display-container");
+
+startButton.addEventListener("click", () => {
+    startScreen.classList.add("hide");
+    displayContainer.classList.remove("hide");
+    initial();
+});
+
+//hide quiz and display start screen
+window.onload = () => {
+    startScreen.classList.remove("hide");
+    displayContainer.classList.add("hide");
+};
