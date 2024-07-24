@@ -12,10 +12,10 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #9d062c;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 4rem;
 }
 
 /* Start screen */
@@ -155,11 +155,12 @@ button {
   color: #ffffff;
 }
 
-/* Media query for phones */
-@media (max-width: 480px) {
+/* Media query for small phones */
+@media (min-width: 320px) {
   h1 {
-    font-size: 1rem;
-    padding: 1em;
+    font-size: 2rem;
+    padding: .5em;
+    margin-top: 1.5rem;
   }
 
   #display-area {
@@ -207,11 +208,19 @@ button {
   }
 }
 
-/* Media Queries for tablets */
-@media (max-width: 768px) {
+/* Media Queries for large phones */
+@media (min-width: 425px) {
   h1 {
     font-size: 2rem;
-    margin-top: 10px;
+    margin-top: 2.5rem;
+    padding: 1em 1em;
+  }
+
+/* Media Queries for tablets */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
     padding: 1em 1em;
   }
 
