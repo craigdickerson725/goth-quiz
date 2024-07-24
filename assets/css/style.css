@@ -3,7 +3,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Palanquin Dark", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
 }
 
 body {
@@ -149,7 +150,6 @@ button {
   color: white;
   border-color: #2f4719;
 }
-
 #user-score {
   font-size: 1.5em;
   color: #ffffff;
@@ -161,7 +161,7 @@ button {
   h1 {
     font-size: 2rem;
     padding: .5em;
-    margin-top: 1.5rem;
+    margin-top: .5rem;
   }
 
   #display-area {
@@ -214,16 +214,15 @@ button {
   h1 {
     font-size: 2rem;
     margin-top: 2.5rem;
-    padding: 1em 1em;
+    padding: .5em .5em;
   }
-}
 
 /* Media Queries for tablets */
 @media (min-width: 768px) {
   h1 {
     font-size: 2.5rem;
-    margin-top: 1.5rem;
-    padding: 1em 1em;
+    margin-top: 1rem;
+    padding: .5em .5em;
   }
 
   #display-area {
