@@ -81,7 +81,7 @@ function quizGenerator() {
 // To display the quiz
 function questionDisplay(questionCount) {
     quizGenerator();
-    document.querySelector(".question-number").innerHTML = `${questionCount + 1} of ${quizArray.length} questions`;
+    document.querySelector(".question-number").innerHTML = `${questionCount + 1} of ${quizArray.length} Questions`;
     secCount = 11;
     userChoiceMade = false;
     clearInterval(countdown);
