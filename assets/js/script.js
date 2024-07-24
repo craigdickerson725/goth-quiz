@@ -6,9 +6,11 @@ let questionCount;
 let scoreCount = 0;
 let incorrectCount = 0;
 let secCount = 11;
+let userChoiceMade = false;
 
 optionDivs.forEach(btn => {
     btn.addEventListener("click", function() {
+        userChoiceMade = true;
         checker(btn);
     });
 });
@@ -18,6 +20,7 @@ function initial() {
     scoreCount = 0;
     incorrectCount = 0;
     secCount = 11;
+    userChoiceMade = false;
     clearInterval(countdown);
     timerDisplay();
     quizArray.sort(() => Math.random() - 0.5);
@@ -80,6 +83,7 @@ function questionDisplay(questionCount) {
     quizGenerator();
     document.querySelector(".question-number").innerHTML = `${questionCount + 1} of ${quizArray.length} questions`;
     secCount = 11;
+    userChoiceMade = false;
     clearInterval(countdown);
     timerDisplay();
 }
@@ -133,13 +137,26 @@ let nextButton = document.getElementById("next-button");
 nextButton.addEventListener("click", displayNext);
 
 function displayNext() {
+    if (!userChoiceMade) {
+        incrementIncorrectScore();
+        updateScoreTracker();
+    }
     enableButtons();
     questionCount++;
     if (questionCount === quizArray.length) {
         displayArea.classList.add("hide");
         scoreArea.classList.remove("hide");
         let userScore = document.getElementById("user-score");
-        userScore.innerHTML = `You got ${scoreCount} questions correct out of ${questionCount}`;
+        // To set up a message regarding the user's final score
+        let message = "";
+        if (scoreCount < 6) {
+            message = "Woah...that score is depressing even to goths!";
+        } else if (scoreCount < 10) {
+            message = "Great score!  You really know your way around the goth scene!";
+        } else {
+            message = "Sweet Siouxsie's Ghost!  You are a global icon of Goth knowledge!";
+        }
+        userScore.innerHTML = `You got ${scoreCount} questions correct out of ${questionCount}. ${message}`;
     } else {
         questionDisplay(questionCount);
     }
