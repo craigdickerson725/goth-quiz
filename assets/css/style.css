@@ -216,6 +216,7 @@ button {
     margin-top: 2.5rem;
     padding: 1em 1em;
   }
+}
 
 /* Media Queries for tablets */
 @media (min-width: 768px) {
