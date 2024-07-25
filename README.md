@@ -35,3 +35,52 @@ The color scheme holds to the goth love of red and black.  The reds, of course, 
 - [Font Awesome](https://fontawesome.com) is where the super-scary skull icon used in the header came from.
 
 - [UXWing](https://uxwing.com) was used to get the fancy timer icon.
+
+## User Stories
+
+User Stories for A Goth Quiz To Make You Sad focuses more on the goth quiz users, who are assumed to be new users, as this is a brief quiz game (intended for use within another website, for example) and most likely won't be played more than a couple of times by each user.
+
+### Goth Quiz Users
+
+- As a goth quiz user, I would like to see a clear heading, so that I can understand what the game is about.
+- As a goth quiz user, I would like to clearly see the question and options, so that I can quickly read what is being asked and promptly choose one of the answer options.
+- As a goth quiz user, I would like to see the correct answer highlighted, so that I can learn the correct answer in the case that my selection was wrong.
+- As a goth quiz user, I would like to have a timer, so that I can experience a fun sense of competition and urgency in the game.
+- As a goth quiz user, I would like to have a score tracker, so that I can see how many correct vs incorrect answers I have at any point during the game.
+-As a goth quiz user, I would like to have a message at the end of the game, so that I feel rewarded for a job well done (or chastised for doing a terrible job).
+
+## Wireframes
+
+To follow best practice, wireframes were developed for mobile and tablet/desktop screens.
+I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
+
+### Mobile Wireframes
+
+<details>
+<summary> Click here to see the Mobile Wireframes </summary>
+
+Begin Screen
+  - ![screenshot](documentation/wireframes/begin_screen_mobile_wireframe.png)
+
+Question Screen
+  - ![screenshot](documentation/wireframes/question_screen_mobile_wireframe.png)
+
+Score Tally/Final Message Screen
+  - ![screenshot](documentation/wireframes/final_screen_mobile_wireframe.png)
+</details>
+
+### Desktop and Tablet Wireframes
+
+<details>
+<summary> Click here to see the Tablet Wireframes </summary>
+
+Begin Screen
+  - ![screenshot](documentation/wireframes/begin_screen_desktop_wireframe.png)
+
+Question Screen
+  - ![screenshot](documentation/wireframes/question_screen_desktop_wireframe.png)
+
+Score Tally/Final Message Screen
+  - ![screenshot](documentation/wireframes/final_screen_desktop_wireframe.png)
+</details>
+
