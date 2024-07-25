@@ -203,3 +203,32 @@ You can fork this repository by using the following steps:
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/craigdickerson725/goth-quiz)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
+
+### Local VS Deployment
+
+After quite a bit of playing through the quiz and testing the local preview and the actual deployed site, there were no noticeable differences found between the two.
+
+## Credits
+
+This project would not have been possible if I had been left to fend for myself with only my minimal experience in javascript.  The following subsections will give the old 'tip o' the hat' to those sources who brought my quiz to life.
+
+### Content
+
+| Source | Location | Notes |
+| --- | --- | --- |
+| [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
+| [Coding Torque](https://codingtorque.com/quiz-app-using-javascript/) | quiz app using javascript | mainly for the skeleton of setting up the javascript |
+| [YouTube](https://www.youtube.com/watch?v=f4fB9Xg2JEY&list=WL&index=3&t=10s) | quiz area | finding javascript ideas for the question buttons and answer checker |
+| [ChatGPT](https://chatgpt.com/) | code correction, debugging | provided many ideas for taking the ideas I used from Coding Torque and changing/improving them to meet my own needs for the final outcome of the quiz |
+
+### Media
+
+Outside of the timer and skull icons that have already been credited, there is no additional media being used in this quiz
+
+### Acknowledgements
+
+The following people were instrumental in the creation of this quiz, and they are worthy of their props:
+
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for his support throughout the development of this project.  Many of the improvements made to the code came from our appointments, without which the site would most likely not function at all.  Also, without his markdown generator, there would be no readme or testing files.
+- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
+- I would like to thank my wife and daughter for allowing me the insane amount of time it took to create this, and for being kind enough to play the quiz on their phones and tablets.
