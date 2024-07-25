@@ -5,7 +5,7 @@ let optionDivs = document.querySelectorAll(".option-div");
 let questionCount;
 let scoreCount = 0;
 let incorrectCount = 0;
-let secCount = 11;
+let secCount = 26;
 let userChoiceMade = false;
 
 optionDivs.forEach(btn => {
@@ -19,7 +19,7 @@ function initial() {
     questionCount = 0;
     scoreCount = 0;
     incorrectCount = 0;
-    secCount = 11;
+    secCount = 26;
     userChoiceMade = false;
     clearInterval(countdown);
     timerDisplay();
@@ -83,7 +83,7 @@ function quizGenerator() {
 function questionDisplay(questionCount) {
     quizGenerator();
     document.querySelector(".question-number").innerHTML = `${questionCount + 1} of ${quizArray.length} Questions`;
-    secCount = 11;
+    secCount = 26;
     userChoiceMade = false;
     clearInterval(countdown);
     timerDisplay();
@@ -100,9 +100,7 @@ function checker(userChoice) {
         userChoice.classList.add("incorrect");
         incrementIncorrectScore(userChoice);
     }
-
     clearInterval(countdown);
-
     updateScoreTracker();
 }
 

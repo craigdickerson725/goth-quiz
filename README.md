@@ -102,7 +102,7 @@ Score Tally/Final Message Screen
 
 - **The Timer**
 
-    - The timer is featured on the top right hand corner of the question area.  The user is given 10 seconds to answer each question.  If the timer runs out, the question is considered incorrect.
+    - The timer is featured on the top right hand corner of the question area.  The user is given 25 seconds to answer each question.  If the timer runs out, the question is considered incorrect.
 
 ![screenshot](documentation/features/feature03.png)
 
