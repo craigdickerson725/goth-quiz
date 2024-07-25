@@ -16,3 +16,22 @@ source: [amiresponsive](https://ui.dev/amiresponsive?url=https://craigdickerson7
 ## UX
 
 The design process was quite simple, actually.  The goal was to create a game with a well-known 'quiz-show' format to give those goth kids out there something to do in the spare time they have between sleeping all day and dancing badly in burned-out goth clubs late at night.  The goal was to display the name of the game above the question area.  The question area itself holds the bulk of the content, and almost all of the interactive features.
+
+### Colour Scheme
+
+The color scheme holds to the goth love of red and black.  The reds, of course, needed to be dark, like a mix between crimson and red wine.  In contrast, white was used to make the background of the question area and stand out like a beacon, cutting through the darkness of a black page.  Text is found sometimes in black, and sometimes in white...representing the duality of man (or something like that).   Actually, the text colors were alternated depending on which color makes them easier to read at any given time.  Also, after the user chooses an answer, the correct answer is given a dark green background, to give off an earthy, witchy-vibe.  If an incorrect answer is chosen, the correct is given a dark green color, and the incorrect a black background color.Here is a rundown of the colors used:
+
+- `#9d062c` used for primary text.
+- `#ffffff` used for quiz area background.
+- `black` used for page background.
+- `white` used for option text.
+- `#2f4719` used for correct answer background color.
+- `black` used for incorrect answer background color.
+
+### Typography
+
+- [Palanquin Dark](https://fonts.google.com/specimen/Palanquin+Dark) was used for all texts.
+
+- [Font Awesome](https://fontawesome.com) is where the super-scary skull icon used in the header came from.
+
+- [UXWing](https://uxwing.com) was used to get the fancy timer icon.
