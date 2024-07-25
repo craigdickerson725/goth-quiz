@@ -84,3 +84,54 @@ Score Tally/Final Message Screen
   - ![screenshot](documentation/wireframes/final_screen_desktop_wireframe.png)
 </details>
 
+## Features
+
+### Existing Features
+
+- **The Begin Button**
+
+    - The begin screen has a welcome message, and the Begin Button is there to start the game when the user is ready.
+
+![screenshot](documentation/features/feature01.png)
+
+- **The Question Area**
+
+    - The main feature of the site would be the questions themselves.  When the begin or next button is clicked, the user is presented with a question.  There are four clickable options...once a choice is made, the correct choice is highlighted in green, and if the user has chosen an incorrect answer, that is given a black background.  When a choice is made, all of the options are disabled until the Next button is clicked and a new question begins.
+
+![screenshot](documentation/features/feature02.png)
+
+- **The Timer**
+
+    - The timer is featured on the top right hand corner of the question area.  The user is given 10 seconds to answer each question.  If the timer runs out, the question is considered incorrect.
+
+![screenshot](documentation/features/feature03.png)
+
+- **The Score Tracker**
+
+    - The score tracker keeps track of how many correct answers versus incorrect answers that the user has at any point during the 10-question quiz. 
+
+![screenshot](documentation/features/feature04.png)
+
+- **The Question Tracker**
+
+    - The question tracker keeps track of which number out of 10 questions the user is on.  This is a way for the user to know how many questions they have already answered, and how many remain.
+
+![screenshot](documentation/features/feature05.png)
+
+- **The Next Button**
+
+    - The next button advances to the next question (or to the end of the game, if all 10 questions have been presented.  If the user does not make an answer selection before clicking the next button, then it is considered an incorrect answer.
+
+![screenshot](documentation/features/feature06.png)
+
+- **The Score Tally/Final Message**
+
+    - When the quiz is finished, the score tally is presented to the user, along with a message which either a) praises the user for their impressive goth knowledge, or b) chastises them for their lack of goth knowledge.  
+
+![screenshot](documentation/features/feature07.png)
+
+- **The Restart Button**
+
+    - When the game is finished, and the user has been presented with their score and final message of encouragement (or discouragement), then a new quiz can be started by clicking the restart button.
+
+![screenshot](documentation/features/feature08.png)
