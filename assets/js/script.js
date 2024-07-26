@@ -32,6 +32,7 @@ function initial() {
 let beginButton = document.getElementById("begin-button");
 let beginScreen = document.querySelector(".begin-screen");
 let displayArea = document.getElementById("display-area");
+let infoText = document.getElementById("info");
 
 beginButton.addEventListener("click", () => {
     beginScreen.classList.add("hide");
