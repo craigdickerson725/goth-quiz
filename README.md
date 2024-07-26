@@ -214,6 +214,8 @@ This project would not have been possible if I had been left to fend for myself 
 
 ### Content
 
+I would like to note that I leaned very heavily on the javascript written by Coding Torque on their "Quiz App Using JavaScript".  This is credited and linked below.  I used it as a guide to get the javascript working, however I saw early on that much would have to be changed to make it function more efficiently (and to make it do more of what I wanted).  When you check out the Coding Torque site, you will see the similarities, but will also see just how much needed to change to make it actually function like a proper quiz game.  I am deeply appreciative of the Coding Torque site's tutorial for the quiz game, and I did learn much from it, so check it out for yourself...they have many other projects that seem like fun ideas!
+
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
