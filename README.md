@@ -47,7 +47,7 @@ User Stories for A Goth Quiz To Make You Sad focuses more on the goth quiz users
 - As a goth quiz user, I would like to see the correct answer highlighted, so that I can learn the correct answer in the case that my selection was wrong.
 - As a goth quiz user, I would like to have a timer, so that I can experience a fun sense of competition and urgency in the game.
 - As a goth quiz user, I would like to have a score tracker, so that I can see how many correct vs incorrect answers I have at any point during the game.
--As a goth quiz user, I would like to have a message at the end of the game, so that I feel rewarded for a job well done (or chastised for doing a terrible job).
+- As a goth quiz user, I would like to have a message at the end of the game, so that I feel rewarded for a job well done (or chastised for doing a terrible job).
 
 ## Wireframes
 
